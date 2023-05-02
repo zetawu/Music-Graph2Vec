@@ -2,8 +2,6 @@
 
 This is the code for the paper "Music-Graph2Vec: An Efficient Method for Embedding Pitch Segment". The main focus of this code is to train pitch segment embeddings and perform genre classification based on these embeddings.
 
-To use our code to train pitch segment embeddings, MIDI files need to be processed into pitch segments. The method for processing MIDI files into pitch segments can be found in [this link](https://github.com/ChinghuaChuan/musicWord2Vec).
-
 The three Python scripts have the following functions:
 
 * `dataset_segment.py`: randomly extracts a subset from the music dataset with a specified size.
@@ -11,3 +9,10 @@ The three Python scripts have the following functions:
 * `train_Music-Graph2Vec.py`: trains pitch segment embeddings using Music-Graph2Vec.
 
 The "trained" directory stores our three trained pitch segment embeddings in key-value pairs.
+
+### Requirements
+
+The codebase is implemented in Python 3.8 package versions.
+
+`pip install -r requirements.txt`
+

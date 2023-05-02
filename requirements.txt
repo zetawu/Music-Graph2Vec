@@ -1,0 +1,6 @@
+gensim==4.1.0
+numpy==1.20.3
+pecanpy==2.0.6
+psutil==5.9.1
+scikit_learn==1.2.1
+scipy==1.7.3

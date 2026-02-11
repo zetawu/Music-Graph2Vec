@@ -35,7 +35,7 @@ adv = []
 # Load the trained model, noted that the model should be stored as key-value pairs
 trained_model = models.KeyedVectors.load_word2vec_format('your trained model dir')
 for genre in genres:
-    # 读取数据
+    # load data
     slices = read_data('./' + genre + '.txt')
     for r in slices:
         genre_vecs_advanced = []
@@ -45,7 +45,7 @@ for genre in genres:
         genre_vecs_advanced = getmean(genre_vecs_advanced)
         lables.append(genre)
         adv.append(genre_vecs_advanced)
-# 使用KNN进行分类
+# classify with KNN
 clf = KNeighborsClassifier(7)
 scores = cross_val_score(clf, adv, lables, cv=10, n_jobs=10)
 print("acc:", scores.mean())
